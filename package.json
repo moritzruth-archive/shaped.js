@@ -1,6 +1,6 @@
 {
   "name": "shaped.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Generate beautiful moving shapes using a canvas element which can for example be used for backgrounds",
   "main": "dist/shaped.min.js",
   "browser": "dist/shaped.min.js",
