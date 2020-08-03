@@ -21,7 +21,7 @@
     "@babel/preset-env": "^7.8.2",
     "@moritzruth/eslint-config": "^1.0.7",
     "babel-eslint": "^10.0.3",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.2",
     "dedent": "^0.7.0",
     "eslint": "^6.8.0",
     "rollup": "^1.29.0",
