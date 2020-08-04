@@ -1,35 +1,33 @@
 {
   "name": "shaped.js",
   "version": "1.0.0",
-  "description": "Generate beautiful moving shapes using a canvas element which can for example be used for backgrounds",
-  "main": "dist/shaped.min.js",
-  "browser": "dist/shaped.min.js",
-  "module": "src/index.js",
+  "description": "Generate cool moving shapes using a canvas element",
   "repository": "https://github.com/moritzruth/shaped.js.git",
-  "author": "Moritz Ruth <dev@moritz-ruth.de>",
+  "author": "Moritz Ruth <dev@moritzruth.de>",
   "license": "Apache-2.0",
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup -c",
-    "dev": "cross-env NODE_ENV=development rollup -c -w"
+    "build": "pika build",
+    "lint": "eslint src",
+    "version": "yarn build",
+    "test": "echo There are no tests",
+    "pub": "pika publish"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "@pika/pack": {
+    "pipeline": [
+      ["@pika/plugin-ts-standard-pkg"],
+      ["@pika/plugin-build-web"],
+      ["@pika/plugin-bundle-web"]
+    ]
+  },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@babel/preset-env": "^7.8.2",
-    "@moritzruth/eslint-config": "^1.0.7",
-    "babel-eslint": "^10.0.3",
-    "cross-env": "^7.0.2",
-    "dedent": "^0.7.0",
-    "eslint": "^6.8.0",
-    "rollup": "^1.29.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-banner": "^0.2.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.2.0"
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-bundle-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
+    "@types/lodash.throttle": "^4.1.6",
+    "eslint": "^7.6.0",
+    "eslint-config-awzzm-ts": "^1.0.1",
+    "typescript": "^3.9.7"
   },
   "dependencies": {
     "lodash.throttle": "^4.1.1",

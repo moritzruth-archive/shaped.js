@@ -1,63 +1,39 @@
 # shaped.js
-> 🍭 Generate beautiful moving shapes using a canvas element which can for example be used for backgrounds
+> 🍭 Generate cool moving shapes using a canvas element
 
-<a href="https://npmjs.org/package/shaped.js">![npm](https://img.shields.io/npm/v/shaped.js?style=flat-square)</a>
+➡️ [**Demo on my website**](https://moritzruth.de)
 
-➡️ [Demo](https://moritz-ruth.de/projects/shaped.js/demo)
+## Install
+```shell script
+yarn add shaped.js
+# or
+npm install shaped.js
+```
 
 ## Usage
-[Click here to open the interactive configuration generator.](https://moritz-ruth.de/projects/shaped.js/demo)
-
-### Using Webpack or ESM
-```js
-import { Canvas } from "shaped.js";
-```
-
-### Using a link tag
-Place this in the head of your HTML document and replace <VERSION> with the required version.
-
-```html
-<link href="https://cdn.jsdelivr.net/npm/shaped.js@<VERSION>/dist/shaped.min.js">
-```
-
-Then access it like this:
+You can just copy this example and change the values to your liking.
 
 ```js
-const Canvas = Shaped.Canvas;
-```
+import { ShapedCanvas } from "shaped.js"
 
-## Example
-
-```js
-const CONFIG = {
-  lines: [
-    {
-      minCount: 8,
-      probability: 1 / 50000,
-      colors: [
-        "rgba(0, 0, 0, 0.8)",
-        "rgba(0, 255, 150, 0.8)",
-        "rgba(0, 150, 255, 0.7)"
-      ],
-      height: 50,
-      length: 50,
-      speed: [0.2, 0.4],
-      randomizeYAfterLeave: true
-    },
-    {
-      probability: 1 / 100000,
-      colors: [
-        "rgba(0, 150, 255, 0.2)",
-        "rgba(0, 255, 150, 0.2)"
-      ],
-      height: 50,
-      length: 50,
-      speed: 0.2,
-      randomizeYAfterLeave: true
-    }
-  ],
-  fillWindowSize: true
-};
-
-new Canvas(document.querySelector("#canvas"), CONFIG);
+new ShapedCanvas(document.querySelector("#canvas"), {
+    // This determines how many lines will be generated.
+    // Just play with the value until you're happy with it.
+    probability: 1 / 40000,
+    minCount: 8,
+    colors: [
+      "rgba(0, 0, 0, 0.7)",
+      "rgba(0, 255, 150, 0.8)",
+      "rgba(0, 150, 255, 0.7)"
+    ],
+    // Use a single value
+    height: 50,
+    length: 50,
+    // Or a range
+    speed: [0.2, 0.8],
+    // Every line gets a new Y coordinate as soon as it leaves the screen
+    randomizeYAfterLeave: true,
+    // The width and height of the canvas will be synced with the width and height of the window.
+    useWindowSize: true
+});
 ```
