@@ -1,6 +1,6 @@
 {
   "name": "shaped.js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Generate cool moving shapes using a canvas element",
   "repository": "https://github.com/moritzruth/shaped.js.git",
   "author": "Moritz Ruth <dev@moritzruth.de>",
@@ -14,9 +14,15 @@
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-ts-standard-pkg"],
-      ["@pika/plugin-build-web"],
-      ["@pika/plugin-bundle-web"]
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-bundle-web"
+      ]
     ]
   },
   "devDependencies": {
