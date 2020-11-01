@@ -3736,9 +3736,9 @@ quick-lru@^1.0.0:
   integrity sha1-Q2CxfGETatOAeDl/8RQW4Ybc+7g=
 
 random-item@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/random-item/-/random-item-3.0.0.tgz#a94edca6845de662072e325c29eca8e85ef88ced"
-  integrity sha512-IpO3Jk9/Dt79R7iS/Fn2d2asGXahMNnXLNRsgSmjTTtiS0tZ972BWEEm9uUgm3YAon5YFUt8126FA9wJAjmeZw==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/random-item/-/random-item-3.1.0.tgz#b0425646b06292059fd8aaf4bdf0c04cf426f625"
+  integrity sha512-0DyAT8LYBNQKSkqcPjia/HNoWCZ5JWBdAQWjBQVh5DMVv3Fv7V90I8/AuUf8NW4zdFn27i9qj8Kp6wI5JsiiOA==
 
 rc@^1.2.8:
   version "1.2.8"
