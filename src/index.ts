@@ -32,7 +32,7 @@ export type ShapedConfig = OptionalShapedConfig & RequiredShapedConfig
 export class ShapedCanvas {
   private static nextInstanceID = 0
   private readonly id: number
-  private readonly windowListeners: { [key: string]: () => void }
+  private readonly windowListeners: Record<string, () => void>
   private readonly config: ShapedConfig
   private readonly element: HTMLCanvasElement
   private readonly ctx: CanvasRenderingContext2D

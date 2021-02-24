@@ -1,10 +1,8 @@
 # shaped.js
 > 🍭 Generate cool moving shapes using a canvas element
 
-➡️ [**Demo on my website**](https://moritzruth.de)
-
 ## Install
-```shell script
+```sh
 yarn add shaped.js
 # or
 npm install shaped.js
